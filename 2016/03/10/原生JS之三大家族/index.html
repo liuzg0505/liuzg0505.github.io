@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>原生JS之三大家族 | 小强</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="offset系列offset系列用于用于获取元素自身的大小和位置，在网页特效中有广泛应用offset系列主要有：offsetHeight、offsetWidth、offsetParent、offsetLeft、offsetTop offsetHeight与offsetWidthoffsetHeight与offsetWidth1231.	获取的是元素真实的高度和宽度2.	获取到的是数值类型，方便计算">
+<meta name="keywords" content="javascript,offset系列,scroll系列,client系列">
+<meta property="og:type" content="article">
+<meta property="og:title" content="原生JS之三大家族">
+<meta property="og:url" content="http://yoursite.com/2016/03/10/原生JS之三大家族/index.html">
+<meta property="og:site_name" content="小强">
+<meta property="og:description" content="offset系列offset系列用于用于获取元素自身的大小和位置，在网页特效中有广泛应用offset系列主要有：offsetHeight、offsetWidth、offsetParent、offsetLeft、offsetTop offsetHeight与offsetWidthoffsetHeight与offsetWidth1231.	获取的是元素真实的高度和宽度2.	获取到的是数值类型，方便计算">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2016/03/10/原生JS之三大家族/offset.png">
+<meta property="og:image" content="http://yoursite.com/2016/03/10/原生JS之三大家族/scroll.png">
+<meta property="og:image" content="http://yoursite.com/2016/03/10/原生JS之三大家族/client1.png">
+<meta property="og:image" content="http://yoursite.com/2016/03/10/原生JS之三大家族/client.png">
+<meta property="og:updated_time" content="2017-09-18T08:30:38.085Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="原生JS之三大家族">
+<meta name="twitter:description" content="offset系列offset系列用于用于获取元素自身的大小和位置，在网页特效中有广泛应用offset系列主要有：offsetHeight、offsetWidth、offsetParent、offsetLeft、offsetTop offsetHeight与offsetWidthoffsetHeight与offsetWidth1231.	获取的是元素真实的高度和宽度2.	获取到的是数值类型，方便计算">
+<meta name="twitter:image" content="http://yoursite.com/2016/03/10/原生JS之三大家族/offset.png">
+  
+    <link rel="alternate" href="/atom.xml" title="小强" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">小强</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">大道至简</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-原生JS之三大家族" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/10/原生JS之三大家族/" class="article-date">
+  <time datetime="2016-03-10T07:25:20.000Z" itemprop="datePublished">2016-03-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/javascript/">javascript</a>►<a class="article-category-link" href="/categories/javascript/三大家族/">三大家族</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      原生JS之三大家族
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="offset系列"><a href="#offset系列" class="headerlink" title="offset系列"></a>offset系列</h1><p><strong>offset系列用于用于获取元素自身的大小和位置，在网页特效中有广泛应用</strong><br><strong>offset系列主要有：offsetHeight、offsetWidth、offsetParent、offsetLeft、offsetTop</strong></p>
+<h2 id="offsetHeight与offsetWidth"><a href="#offsetHeight与offsetWidth" class="headerlink" title="offsetHeight与offsetWidth"></a>offsetHeight与offsetWidth</h2><p><strong>offsetHeight与offsetWidth</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span>	获取的是元素真实的高度和宽度</div><div class="line"><span class="number">2.</span>	获取到的是数值类型，方便计算</div><div class="line"><span class="number">3.</span>	offsetHeight与offsetWidth是只读属性，不能设置。</div></pre></td></tr></table></figure></p>
+<p><strong>style.height与style.width</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span>	只能获取行内样式</div><div class="line"><span class="number">2.</span>	获取到的是字符串类型，需要转换</div></pre></td></tr></table></figure>
+<p><strong><em>结论</em></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> 设置宽度高度使用style.width与style.height</div><div class="line"><span class="number">2.</span> 获取宽度和高度offsetWidth与offsetHeight</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="offsetParent"><a href="#offsetParent" class="headerlink" title="offsetParent"></a>offsetParent</h2><p><strong>parentNode和offsetParent</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> parentNode始终是父元素</div><div class="line"><span class="number">2.</span> offsetParent是离当前元素最近的定位元素(absolute、relative)，如果没有，那就找body</div></pre></td></tr></table></figure>
+<h2 id="offsetLeft与offsetTop"><a href="#offsetLeft与offsetTop" class="headerlink" title="offsetLeft与offsetTop"></a>offsetLeft与offsetTop</h2><p><strong>offsetLeft: 自身左侧到offsetParent左侧的距离：left + margin-left</strong><br><strong>offsetTop:自身顶部到offsetParent顶部的距离 :  top + margin-top</strong></p>
+<p><strong>offsetLeft与offsetTop</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span>	元素自身与offsetParent真实的距离</div><div class="line"><span class="number">2.</span>	获取到的是数值类型，方便计算</div><div class="line"><span class="number">3.</span>	只读属性，只能获取，不能设置</div></pre></td></tr></table></figure></p>
+<p><strong>style.left与style.top</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span>	只能获取行内样式</div><div class="line"><span class="number">2.</span>	获取到的是字符串，需要转换</div><div class="line"><span class="number">3.</span>	可以获取，也可以设置</div></pre></td></tr></table></figure>
+<p><strong>结论</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">获取操作：用offset系列</div><div class="line">设置操作：用style.xxx进行设置。</div></pre></td></tr></table></figure>
+<img src="/2016/03/10/原生JS之三大家族/offset.png" alt="offset" title="offset">
+<h1 id="scroll家族"><a href="#scroll家族" class="headerlink" title="scroll家族"></a>scroll家族</h1><p><strong>scroll家族用来获取盒子内容的大小和位置</strong></p>
+<p><strong>scroll家族有：scrollWidth、scrollHeight、scrollLeft、scrollTop</strong></p>
+<ol>
+<li>scrollWidth与scrollHeight是盒子内容的真实的宽度和高度。与和盒子大小无关，仅仅与盒子的内容有关系。</li>
+<li>scrollTop是盒子内容被滚动条卷去的头部的高度。scrollLeft是盒子内容被滚动条卷去的左侧的宽度。</li>
+</ol>
+<img src="/2016/03/10/原生JS之三大家族/scroll.png" alt="scroll" title="scroll">
+<p>onscroll事件，对于有滚动条的盒子，可以使用onscroll注册滚动事件，每滚动一像素，就会触发该事件。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(“box”);</div><div class="line">box.onscroll = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="comment">//事件处理程序</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>获取页面被卷去的高度和宽度</strong></p>
+<p>通常来说，scroll家族用的最多的地方就是用来获取页面被卷去的宽度和高度，非常的常用</p>
+<p>页面被卷去的高度和宽度的兼容性封装</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">scroll</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        top: <span class="built_in">window</span>.pageYOffset || <span class="built_in">document</span>.documentElement.scrollTop || <span class="built_in">document</span>.body.scrollTop || <span class="number">0</span>,</div><div class="line">        left: <span class="built_in">window</span>.pageXOffset || <span class="built_in">document</span>.documentElement.scrollLeft || <span class="built_in">document</span>.body.scrollLeft || <span class="number">0</span></div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//如何使用</span></div><div class="line"><span class="built_in">console</span>.log(scroll().top);<span class="comment">//获取页面被卷去的头部的距离</span></div><div class="line"><span class="built_in">console</span>.log(scroll().left);<span class="comment">//获取页面被卷去的左侧的距离</span></div></pre></td></tr></table></figure>
+<h1 id="client家族"><a href="#client家族" class="headerlink" title="client家族"></a>client家族</h1><p><strong>client家族用于获取盒子可视区的大小</strong><br><strong>client家族有clientWidth、clientHeight、clientLeft、clientTop</strong></p>
+<p><strong>如果内容没有超出盒子范围：clientWidth与scrollWidth相同</strong></p>
+<img src="/2016/03/10/原生JS之三大家族/client1.png" alt="client" title="client">
+<p><strong>三大家族对比</strong></p>
+<img src="/2016/03/10/原生JS之三大家族/client.png" alt="client" title="client">
+<p><strong>clientTop与clientLeft</strong></p>
+<p><code>clientTop</code> <strong>与</strong><code>clientLeft</code> <strong>完全没有用 </strong>，<strong>他们就是</strong> <code>borderTop</code>  <strong>与</strong> <code>borderLeft</code></p>
+<p>但是：如果有滚动条，还会包含滚动条的宽度，但是见过滚动条在上边或者左边的？</p>
+<p><strong>onresize事件：onresize事件会在窗口被调整大小的时候发生。</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.onresize = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="comment">//事件处理程序</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>client系列一般用来获取页面的可视区宽高</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">client</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        width: <span class="built_in">window</span>.innerWidth || <span class="built_in">document</span>.documentElement.clientWidth || <span class="built_in">document</span>.body.clientWidth || <span class="number">0</span>,</div><div class="line">        height: <span class="built_in">window</span>.innerHeight || <span class="built_in">document</span>.documentElement.clientHeight || <span class="built_in">document</span>.body.clientHeight || <span class="number">0</span></div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/03/10/原生JS之三大家族/" data-id="cj7px11oc0005jgw5tacfslge" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/client系列/">client系列</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/offset系列/">offset系列</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scroll系列/">scroll系列</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/03/24/搭建github博客和hexo/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          搭建github博客和hexo
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/02/26/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AngularJS/">AngularJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/三大家族/">三大家族</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/模块化/">模块化</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/模块化/requireJS/">requireJS</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AngularJS/">AngularJS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/client系列/">client系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/offset系列/">offset系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/requireJS/">requireJS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scroll系列/">scroll系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模块化/">模块化</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AngularJS/" style="font-size: 15px;">AngularJS</a> <a href="/tags/client系列/" style="font-size: 10px;">client系列</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/offset系列/" style="font-size: 10px;">offset系列</a> <a href="/tags/requireJS/" style="font-size: 10px;">requireJS</a> <a href="/tags/scroll系列/" style="font-size: 10px;">scroll系列</a> <a href="/tags/模块化/" style="font-size: 10px;">模块化</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/03/20/模块化和requireJS/">模块化和requireJS</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/17/git分支操作和远程仓库/">git分支操作和远程仓库</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/16/AngularJS（二）/">AngularJS（二）</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/15/AngularJS（一）/">AngularJS（一）</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/16/bash和git常用命令/">bash和git常用命令</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 liuzg<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- //ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js -->
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<div id="totop" style="position:fixed;bottom:150px;right:20px;cursor: pointer;z-index: 999!important;">
+<a title="返回顶部"><img src="/imgs/scrollup.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+  </div>
+</body>
+</html>
