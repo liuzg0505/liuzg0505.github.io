@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>web存储 | 小强</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="HTTP状态保持1先说状态保持，再说 cookie, sessionStorage, localStorage 和 session. HTTP协议是无状态的HTTP无状态协议，是指协议对于事务处理没有记忆能力。当我们给服务器发送请求，服务器根据请求响应对应的数据，但是服务器不会记录任何的信息。 对于一个浏览器，发出的多次请求，web服务器无法区分是不是来源于同一个服务器。 服务器不会记录客户端的信">
+<meta name="keywords" content="javascript,http状态保持,web存储,cookie,sessionStorage,localStorage,session">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web存储">
+<meta property="og:url" content="http://yoursite.com/2016/03/14/web存储/index.html">
+<meta property="og:site_name" content="小强">
+<meta property="og:description" content="HTTP状态保持1先说状态保持，再说 cookie, sessionStorage, localStorage 和 session. HTTP协议是无状态的HTTP无状态协议，是指协议对于事务处理没有记忆能力。当我们给服务器发送请求，服务器根据请求响应对应的数据，但是服务器不会记录任何的信息。 对于一个浏览器，发出的多次请求，web服务器无法区分是不是来源于同一个服务器。 服务器不会记录客户端的信">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-09-19T01:09:48.582Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="web存储">
+<meta name="twitter:description" content="HTTP状态保持1先说状态保持，再说 cookie, sessionStorage, localStorage 和 session. HTTP协议是无状态的HTTP无状态协议，是指协议对于事务处理没有记忆能力。当我们给服务器发送请求，服务器根据请求响应对应的数据，但是服务器不会记录任何的信息。 对于一个浏览器，发出的多次请求，web服务器无法区分是不是来源于同一个服务器。 服务器不会记录客户端的信">
+  
+    <link rel="alternate" href="/atom.xml" title="小强" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">小强</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">大道至简</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-web存储" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/14/web存储/" class="article-date">
+  <time datetime="2016-03-14T05:35:50.000Z" itemprop="datePublished">2016-03-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/javascript/">javascript</a>►<a class="article-category-link" href="/categories/javascript/web存储/">web存储</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      web存储
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="HTTP状态保持"><a href="#HTTP状态保持" class="headerlink" title="HTTP状态保持"></a>HTTP状态保持</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">先说状态保持，再说 cookie, sessionStorage, localStorage 和 session.</div></pre></td></tr></table></figure>
+<h2 id="HTTP协议是无状态的"><a href="#HTTP协议是无状态的" class="headerlink" title="HTTP协议是无状态的"></a>HTTP协议是无状态的</h2><p><a href="https://baike.baidu.com/item/HTTP%E6%97%A0%E7%8A%B6%E6%80%81%E5%8D%8F%E8%AE%AE/5808645?fr=aladdin" target="_blank" rel="external">HTTP无状态协议</a>，是指协议对于事务处理没有记忆能力。当我们给服务器发送请求，服务器根据请求响应对应的数据，但是服务器不会记录任何的信息。</p>
+<p>对于一个浏览器，发出的多次请求，web服务器无法区分是不是来源于同一个服务器。</p>
+<p>服务器不会记录客户端的信息，每次请求的状态仅限于当次的请求，下次请求时，服务器会把浏览器当成一个新的会话进行处理。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">- 公交车司机不会记住每天上车的乘客。</div><div class="line">- 自动售货机不会记录每次买东西的客户。</div><div class="line">- 服务器不会记住每次浏览器请求的状态。</div></pre></td></tr></table></figure>
+<p>好处：服务器不需要先前的信息，应答会比较快</p>
+<p>缺点：如果后续的请求需要前面的信息，会导致每次传送的数据量变大。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">http协议是无状态的，那么当我们登录之后，服务器无法记录我们是否登录过，难道每次操作都需要用户重新登录么？应该怎么解决这个问题？</div><div class="line">这个时候就需要状态保持。</div></pre></td></tr></table></figure>
+<h2 id="状态保持"><a href="#状态保持" class="headerlink" title="状态保持"></a>状态保持</h2><a id="more"></a>
+<p>HTTP无状态的特性有时候严重的阻碍了某些功能的实现，因为交互是需要承前启后的。</p>
+<ul>
+<li>一个网站需要登录，但是在你登录过后，因为是无状态的，导致下个请求，服务端还是无法识别你的身份。</li>
+<li>一个简单的购物车功能，在你选好了商品，跳转到结算页面时，浏览器无法确定用户之前选择了什么商品。</li>
+</ul>
+<p><strong>HTTP是无状态的，因此两种用于保持HTTP状态的技术就应运而生了，一个是Cookie，一个是Session，我们可以通过Cookie和Session存储一些额外的信息，从而达到保持HTTP状态的目的。</strong></p>
+<p>喝咖啡的例子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">一家咖啡厅有一个长期的活动，只要喝满<span class="number">5</span>杯咖啡，就可以赠送一杯咖啡，当然一次性消费<span class="number">5</span>杯咖啡基本不可能。但是咖啡的消费数量可以累计。但是服务员又不可能每次记下来所有的客人喝了多少的咖啡。应该什么时候赠送免费的咖啡。应该如何解决这个问题？</div><div class="line"><span class="number">1.</span> 咖啡厅给客户一张卡片，卡片都会有一个唯一的卡号，一般还有一个有效的期限。（客户保存卡号信息：Cookie）</div><div class="line"><span class="number">2.</span> 咖啡厅用一个本子，记录下来每张卡片的消费数量和消费信息。（咖啡厅保存消费信息：Session）</div><div class="line"><span class="number">3.</span> 每次消费时，客户只需要出示卡片，咖啡厅根据卡号就能查询出客户的消费信息，并且修改这些消费信息。（Cookie+Seesion实现状态的保持）</div><div class="line"><span class="number">4.</span> 这样就能够实现咖啡厅记录每一个客户的消费状态了。</div></pre></td></tr></table></figure>
+<h1 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h1><h2 id="cookie概念"><a href="#cookie概念" class="headerlink" title="cookie概念"></a>cookie概念</h2><p>Cookie是客户端保持状态的解决方案。Cookie存储了服务端发送给客户端的一些特殊信息，这些信息以文本的方式存储在客户端。客户端每次向服务器发送请求时都会带上这些特殊的信息。</p>
+<ul>
+<li>Cookie是记录在客户端的一小段文本信息，伴随这用户请求，会在浏览器和服务器之间传递。</li>
+<li>Cookie是以域名为单位存储的，每个域名之间的Cookie之间是相互隔离的，也就是说不同域名之间的Cookie是不可以相互操作的（同源策略）</li>
+<li>必须通过http协议访问页面，才能访问到cookie中的内容。</li>
+<li>cookie有大小限制，不会超过4kb，不要存储大量数据。</li>
+<li>一个域名下的cookie是在该域名下所有的页面都可以访问的。子路径中可以访问父路径中存储的cookie，但是父路径中无法访问子路径中的cookie，一半情况下，我们会直接把cookie存储到域名的根目录下，这样，该域名下所有的页面都可以访问了。</li>
+</ul>
+<h2 id="js操作cookie"><a href="#js操作cookie" class="headerlink" title="js操作cookie"></a>js操作cookie</h2><p>cookie其实就是一个document的一个属性，cookie是一个字符串，这个字符串有特定的格式。<br>cookie的格式： <code>key=value;key=value;key=value;</code></p>
+<ul>
+<li>设置cookie</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//设置cookie，设置多个cookie，不是覆盖，而是追加操作</span></div><div class="line"><span class="comment">//设置的cookie默认是会话级别的，即浏览器关闭就失效</span></div><div class="line"><span class="built_in">document</span>.cookie = <span class="string">"name=zs"</span>;</div><div class="line"><span class="built_in">document</span>.cookie = <span class="string">"age=18"</span>;</div><div class="line"></div><div class="line"><span class="comment">//设置过期时间 </span></div><div class="line"><span class="comment">// max-age:1  单位秒  7 * 60 * 60 * 24</span></div><div class="line"><span class="built_in">document</span>.cookie = <span class="string">"desc=hehe;max-age=60"</span>;</div><div class="line"><span class="comment">// expires: 指定过期的具体日期（不推荐）</span></div><div class="line"><span class="built_in">document</span>.cookie = <span class="string">"desc=hehe;expires="</span>+<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-08-04 23:59:59"</span>);</div><div class="line"></div><div class="line"><span class="comment">//设置访问路径,通常都会设置成/，因为这样才能保证该网站下所有的页面都能获取到cookie。</span></div><div class="line"><span class="comment">//cookie的访问规则：子路径中可以访问父路径中存储的cookie，但是父路径中无法访问子路径中的cookie</span></div><div class="line"><span class="built_in">document</span>.cookie = <span class="string">"desc=hehe;max-age=60;path=/"</span>;</div></pre></td></tr></table></figure>
+<ul>
+<li>获取cookie</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//获取到的cookie格式为：desc=hehe; name=zs; age=18</span></div><div class="line"><span class="comment">//如果想要获取指定的cookie，需要对字符串进行切割，太麻烦</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">document</span>.cookie);</div></pre></td></tr></table></figure>
+<ul>
+<li>删除cookie</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//cookie无法覆盖，因此无法直接删除，通过我们删除一个cookie的操作就是设置max-age:-1即可。</span></div><div class="line"> <span class="built_in">document</span>.cookie = <span class="string">"age=18;max-age=-1;path=/"</span>;</div></pre></td></tr></table></figure>
+<p>总结：使用原生js操作cookie太过于麻烦。通常我们都会使用jquery.cookie插件操作cookie</p>
+<h2 id="jquery操作cookie"><a href="#jquery操作cookie" class="headerlink" title="jquery操作cookie"></a>jquery操作cookie</h2><p>jquery.cookie.js插件是一个专门用于操作cookie的一个插件，使用起来非常的方便和简单。</p>
+<p><a href="https://plugins.jquery.com/cookie/" target="_blank" rel="external">官方网站</a></p>
+<p><a href="https://plugins.jquery.com/cookie/" target="_blank" rel="external">github地址</a></p>
+<ul>
+<li>设置cookie</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//设置一个会话级别的cookie，浏览器关闭就消失</span></div><div class="line">$.cookie(<span class="string">'name'</span>, <span class="string">'value'</span>);</div><div class="line"></div><div class="line"><span class="comment">//设置一个7天有效期的cookie</span></div><div class="line"><span class="comment">//expires也可以指定一个具体的过期时间</span></div><div class="line">$.cookie(<span class="string">'name'</span>, <span class="string">'value'</span>, &#123; <span class="attr">expires</span>: <span class="number">7</span> &#125;);</div><div class="line"></div><div class="line"><span class="comment">//设置cookie的有效期和路径</span></div><div class="line">$.cookie(<span class="string">'name'</span>, <span class="string">'value'</span>, &#123; <span class="attr">expires</span>: <span class="number">7</span>, <span class="attr">path</span>: <span class="string">'/'</span> &#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>获取cookie</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//如果存在，返回对应的值</span></div><div class="line">$.cookie(<span class="string">'name'</span>); <span class="comment">// =&gt; "value"</span></div><div class="line"><span class="comment">//如果不存在，返回undefined</span></div><div class="line">$.cookie(<span class="string">'nothing'</span>); <span class="comment">// =&gt; undefined</span></div><div class="line"></div><div class="line"><span class="comment">//获取所有的额cookie</span></div><div class="line">$.cookie(); <span class="comment">// =&gt; &#123; "name": "value" &#125;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>移除cookie</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 移除cookie，如果成功，返回true，否则false</span></div><div class="line">$.removeCookie(<span class="string">'name'</span>); <span class="comment">// =&gt; true</span></div><div class="line">$.removeCookie(<span class="string">'nothing'</span>); <span class="comment">// =&gt; false</span></div><div class="line"></div><div class="line"><span class="comment">// 如果路径不同时，需要指定路径</span></div><div class="line">$.cookie(<span class="string">'name'</span>, <span class="string">'value'</span>, &#123; <span class="attr">path</span>: <span class="string">'/'</span> &#125;);</div><div class="line"><span class="comment">// 移除失败</span></div><div class="line">$.removeCookie(<span class="string">'name'</span>); <span class="comment">// =&gt; false</span></div><div class="line"><span class="comment">// 移除成功</span></div><div class="line">$.removeCookie(<span class="string">'name'</span>, &#123; <span class="attr">path</span>: <span class="string">'/'</span> &#125;); <span class="comment">// =&gt; true</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tips：cookie的用途其实就是， 实现不同页面之间的数据共享</div></pre></td></tr></table></figure>
+<h2 id="php操作cookie（了解服务端的处理）"><a href="#php操作cookie（了解服务端的处理）" class="headerlink" title="php操作cookie（了解服务端的处理）"></a>php操作cookie（了解服务端的处理）</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//每次请求，浏览器都会讲cookie发送给服务器。</span></div><div class="line"><span class="comment">//$_COOKIE是一个伪数组，里面存放了所有的cookie信息。</span></div><div class="line">print_r($_COOKIE);</div><div class="line"></div><div class="line"><span class="comment">//设置cookie,</span></div><div class="line"><span class="comment">//实质：响应头中添加了set-cookie, 最终还是浏览器添加的这个cookie</span></div><div class="line">setcookie(<span class="string">"age"</span>, <span class="string">"18"</span>);</div></pre></td></tr></table></figure>
+<p>php对于cookie的具体操作，我们不需要深究，我们只需要知道一点，服务器可以操作cookie，实质是通过响应头，让浏览器操作cookie。</p>
+<h1 id="sessionStorage与localStorage"><a href="#sessionStorage与localStorage" class="headerlink" title="sessionStorage与localStorage"></a>sessionStorage与localStorage</h1><p><strong>HTML5规范提出了解决方案，使用sessionStorage和localStorage存储数据。设置、读取、删除操作很方便</strong></p>
+<p>window.sessionStorage的特点<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> 生命周期为关闭浏览器窗口</div><div class="line"><span class="number">2.</span> 不能在多个窗口下共享数据。</div><div class="line"><span class="number">3.</span> 大小为<span class="number">5</span>M</div></pre></td></tr></table></figure></p>
+<p>window.localStorage的特点<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> 永久生效，除非手动删除</div><div class="line"><span class="number">2.</span> 可以多个窗口共享</div><div class="line"><span class="number">3.</span> 大小为<span class="number">20</span>M</div></pre></td></tr></table></figure></p>
+<p>window.sessionStorage与window.localStorage的方法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">setItem(key, value) <span class="comment">//设置存储内容</span></div><div class="line">getItem(key) <span class="comment">//读取存储内容</span></div><div class="line">removeItem(key) <span class="comment">//删除键值为key的存储内容</span></div><div class="line">clear() <span class="comment">//清空所有存储内容</span></div><div class="line">key(n) <span class="comment">//以索引值来获取存储内容</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//设置内容、获取内容、移除内容 、清空内容</span></div><div class="line"></div><div class="line"><span class="comment">//设置内容</span></div><div class="line">localStorage.setItem(<span class="string">"name"</span>, <span class="string">"胡聪聪"</span>);</div><div class="line"></div><div class="line"><span class="comment">//获取内容</span></div><div class="line"><span class="built_in">console</span>.log(localStorage.getItem(<span class="string">"name"</span>));</div><div class="line"></div><div class="line"><span class="comment">//移除</span></div><div class="line">localStorage.removeItem(<span class="string">"name"</span>);</div><div class="line"></div><div class="line"><span class="comment">//清空</span></div><div class="line">localStorage.clear();</div></pre></td></tr></table></figure>
+<p>#cookies, sessionStorage和localStorage的区别<br><strong>cookie</strong> :</p>
+<ul>
+<li>大小：4k </li>
+<li>获取方式：每次请求都会自动带上cookie</li>
+<li>生命周期：浏览器关闭就失效 </li>
+<li>路径：不同源的网站不能共享，同源网站可以同享。</li>
+<li>通常用于存储用户名、密码、会话id。</li>
+</ul>
+<p><strong>localStorage</strong> :</p>
+<ul>
+<li>大小：一般为5MB </li>
+<li>存取方式：需要手动获取，手动存储</li>
+<li>生命周期：只要不手动删除，永远不过期 </li>
+</ul>
+<p><strong>sessionStorage</strong> :</p>
+<ul>
+<li>大小：一般为5MB</li>
+<li>存取方式：需要手动获取，手动存储</li>
+<li>生命周期：关闭浏览器就不生效  不同窗口不共享</li>
+</ul>
+<h1 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h1><p>与cookie相对的一个技术是session，它是通过服务器来保持状态的。session这个单词包含的意思有很多。</p>
+<ul>
+<li>Session指的是服务器端为客户端所开辟的存储空间，在其中保存的信息就是用于保持状态</li>
+<li>我们需要关注如何往session中存放东西，如果从session中获取东西。</li>
+<li>session会为客户端的请求开辟一个小空间，用于存储信息，每一个空间都会有一个唯一的id</li>
+</ul>
+<h2 id="session的操作"><a href="#session的操作" class="headerlink" title="session的操作"></a>session的操作</h2><ul>
+<li>开启session</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//1. 开启session</span></div><div class="line">session_start();</div><div class="line"></div><div class="line"><span class="comment">//2. 设置内容</span></div><div class="line">$_SESSION[<span class="string">"name"</span>] = <span class="string">"zhangsan"</span>;</div><div class="line">$_SESSION[<span class="string">"age"</span>] = <span class="number">18</span>;</div><div class="line"></div><div class="line"><span class="comment">//3. 获取session</span></div><div class="line"><span class="keyword">echo</span> $_SESSION[<span class="string">"name"</span>];</div><div class="line"></div><div class="line"><span class="comment">//4. 同一个服务器中，session也是可以共享的</span></div></pre></td></tr></table></figure>
+<p>问题：http是无状态的，为什么session也可以进行数据共享？</p>
+<h2 id="cookie和session实现状态保持"><a href="#cookie和session实现状态保持" class="headerlink" title="cookie和session实现状态保持"></a>cookie和session实现状态保持</h2><ul>
+<li>第一次访问服务器的时候，<code>session_start()</code>函数会生成一个<code>PHPSESSID</code>,返回给客户端</li>
+<li>客户端会将<code>PHPSESSID</code>保存下来，每次请求都会带上cookie</li>
+<li>下次请求时，服务器通过<code>PHPSESSID</code>就可以确认客户端的身份了。</li>
+<li>状态保持，cookie和session缺一不可，不然无法实现。</li>
+</ul>
+<h2 id="session的过期时间（了解）"><a href="#session的过期时间（了解）" class="headerlink" title="session的过期时间（了解）"></a>session的过期时间（了解）</h2><p>在<code>php.ini</code>配置文件中有一个<code>gc_maxlifetime:1440</code>，如果<code>PHPSESSID</code>的最后修改时间操作了1440秒，那么这个session就会被认为过期了，那么这个session就会被删除。</p>
+<p>简单的说，如果我登录到某网站，如果在1440秒（默认值）内没有操作过，那么对应的session就认为是过期了。我们可以通过修改 <code>gc_maxlifetime</code>来延长过期时间。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/03/14/web存储/" data-id="cj7qwkk250007qww5wgze02yb" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cookie/">cookie</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/http状态保持/">http状态保持</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/localStorage/">localStorage</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/session/">session</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sessionStorage/">sessionStorage</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web存储/">web存储</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/03/24/搭建github博客和hexo/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          搭建github博客和hexo
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/03/10/原生JS之三大家族/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">原生JS之三大家族</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AngularJS/">AngularJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web存储/">web存储</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/三大家族/">三大家族</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/模块化/">模块化</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/模块化/requireJS/">requireJS</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AngularJS/">AngularJS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/client系列/">client系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cookie/">cookie</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http状态保持/">http状态保持</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/localStorage/">localStorage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/offset系列/">offset系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/requireJS/">requireJS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scroll系列/">scroll系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/session/">session</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sessionStorage/">sessionStorage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web存储/">web存储</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模块化/">模块化</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AngularJS/" style="font-size: 15px;">AngularJS</a> <a href="/tags/client系列/" style="font-size: 10px;">client系列</a> <a href="/tags/cookie/" style="font-size: 10px;">cookie</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/http状态保持/" style="font-size: 10px;">http状态保持</a> <a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/localStorage/" style="font-size: 10px;">localStorage</a> <a href="/tags/offset系列/" style="font-size: 10px;">offset系列</a> <a href="/tags/requireJS/" style="font-size: 10px;">requireJS</a> <a href="/tags/scroll系列/" style="font-size: 10px;">scroll系列</a> <a href="/tags/session/" style="font-size: 10px;">session</a> <a href="/tags/sessionStorage/" style="font-size: 10px;">sessionStorage</a> <a href="/tags/web存储/" style="font-size: 10px;">web存储</a> <a href="/tags/模块化/" style="font-size: 10px;">模块化</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/03/20/模块化和requireJS/">模块化和requireJS</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/17/git分支操作和远程仓库/">git分支操作和远程仓库</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/16/AngularJS（二）/">AngularJS（二）</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/15/AngularJS（一）/">AngularJS（一）</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/16/bash和git常用命令/">bash和git常用命令</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 liuzg<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- //ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js -->
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<div id="totop" style="position:fixed;bottom:150px;right:20px;cursor: pointer;z-index: 999!important;">
+<a title="返回顶部"><img src="/imgs/scrollup.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+  </div>
+</body>
+</html>
