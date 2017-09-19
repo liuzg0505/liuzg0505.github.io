@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="小强">
 <meta property="og:description" content="HTTP状态保持1先说状态保持，再说 cookie, sessionStorage, localStorage 和 session. HTTP协议是无状态的HTTP无状态协议，是指协议对于事务处理没有记忆能力。当我们给服务器发送请求，服务器根据请求响应对应的数据，但是服务器不会记录任何的信息。 对于一个浏览器，发出的多次请求，web服务器无法区分是不是来源于同一个服务器。 服务器不会记录客户端的信">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-19T11:26:02.083Z">
+<meta property="og:updated_time" content="2017-09-19T11:29:21.496Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web存储">
 <meta name="twitter:description" content="HTTP状态保持1先说状态保持，再说 cookie, sessionStorage, localStorage 和 session. HTTP协议是无状态的HTTP无状态协议，是指协议对于事务处理没有记忆能力。当我们给服务器发送请求，服务器根据请求响应对应的数据，但是服务器不会记录任何的信息。 对于一个浏览器，发出的多次请求，web服务器无法区分是不是来源于同一个服务器。 服务器不会记录客户端的信">
@@ -159,7 +159,7 @@
 <p>window.localStorage的特点<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> 永久生效，除非手动删除</div><div class="line"><span class="number">2.</span> 可以多个窗口共享</div><div class="line"><span class="number">3.</span> 大小为<span class="number">20</span>M</div></pre></td></tr></table></figure></p>
 <p>window.sessionStorage与window.localStorage的方法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">setItem(key, value) <span class="comment">//设置存储内容</span></div><div class="line">getItem(key) <span class="comment">//读取存储内容</span></div><div class="line">removeItem(key) <span class="comment">//删除键值为key的存储内容</span></div><div class="line">clear() <span class="comment">//清空所有存储内容</span></div><div class="line">key(n) <span class="comment">//以索引值来获取存储内容</span></div></pre></td></tr></table></figure></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//设置内容、获取内容、移除内容 、清空内容</span></div><div class="line"></div><div class="line"><span class="comment">//设置内容</span></div><div class="line">localStorage.setItem(<span class="string">"name"</span>, <span class="string">"胡聪聪"</span>);</div><div class="line"></div><div class="line"><span class="comment">//获取内容</span></div><div class="line"><span class="built_in">console</span>.log(localStorage.getItem(<span class="string">"name"</span>));</div><div class="line"></div><div class="line"><span class="comment">//移除</span></div><div class="line">localStorage.removeItem(<span class="string">"name"</span>);</div><div class="line"></div><div class="line"><span class="comment">//清空</span></div><div class="line">localStorage.clear();</div></pre></td></tr></table></figure>
-<p>#cookies, sessionStorage和localStorage的区别<br><strong>cookie</strong> :</p>
+<h1 id="cookies-sessionStorage和localStorage的区别"><a href="#cookies-sessionStorage和localStorage的区别" class="headerlink" title="cookies, sessionStorage和localStorage的区别"></a>cookies, sessionStorage和localStorage的区别</h1><p><strong>cookie</strong> :</p>
 <ul>
 <li>大小：4k </li>
 <li>获取方式：每次请求都会自动带上cookie</li>
@@ -202,7 +202,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/14/web存储/" data-id="cj7ril27t0009g0w5anqmtuwo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/14/web存储/" data-id="cj7ripb2t000bd4w5jlfsqwyl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cookie/">cookie</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/http状态保持/">http状态保持</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/localStorage/">localStorage</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/session/">session</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sessionStorage/">sessionStorage</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web存储/">web存储</a></li></ul>
