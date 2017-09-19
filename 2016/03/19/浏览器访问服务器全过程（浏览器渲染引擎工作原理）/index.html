@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Category: web存储 | 小强</title>
+  <title>浏览器访问服务器全过程（浏览器渲染引擎工作原理） | 小强</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="菜鸟码农，我要飞！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小强">
-<meta property="og:url" content="http://yoursite.com/categories/javascript/web存储/index.html">
+  <meta name="description" content="浏览器访问服务器全过程（浏览器渲染引擎工作原理）tips:  地址栏输入网址敲回车以后，经历的过程（简介）">
+<meta name="keywords" content="浏览器工作原理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浏览器访问服务器全过程（浏览器渲染引擎工作原理）">
+<meta property="og:url" content="http://yoursite.com/2016/03/19/浏览器访问服务器全过程（浏览器渲染引擎工作原理）/index.html">
 <meta property="og:site_name" content="小强">
-<meta property="og:description" content="菜鸟码农，我要飞！">
+<meta property="og:description" content="浏览器访问服务器全过程（浏览器渲染引擎工作原理）tips:  地址栏输入网址敲回车以后，经历的过程（简介）">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-09-19T03:09:02.634Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小强">
-<meta name="twitter:description" content="菜鸟码农，我要飞！">
+<meta name="twitter:title" content="浏览器访问服务器全过程（浏览器渲染引擎工作原理）">
+<meta name="twitter:description" content="浏览器访问服务器全过程（浏览器渲染引擎工作原理）tips:  地址栏输入网址敲回车以后，经历的过程（简介）">
   
     <link rel="alternate" href="/atom.xml" title="小强" type="application/atom+xml">
   
@@ -69,39 +71,78 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/03/14/web存储/" class="archive-article-date">
-  <time datetime="2016-03-14T05:35:50.000Z" itemprop="datePublished">3月 14</time>
+        <section id="main"><article id="post-浏览器访问服务器全过程（浏览器渲染引擎工作原理）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/19/浏览器访问服务器全过程（浏览器渲染引擎工作原理）/" class="article-date">
+  <time datetime="2016-03-19T02:52:29.000Z" itemprop="datePublished">2016-03-19</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/14/web存储/">web存储</a>
+    <h1 class="article-title" itemprop="name">
+      浏览器访问服务器全过程（浏览器渲染引擎工作原理）
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="浏览器访问服务器全过程（浏览器渲染引擎工作原理）"><a href="#浏览器访问服务器全过程（浏览器渲染引擎工作原理）" class="headerlink" title="浏览器访问服务器全过程（浏览器渲染引擎工作原理）"></a>浏览器访问服务器全过程（浏览器渲染引擎工作原理）</h1><p><code>tips:</code>  <strong>地址栏输入网址敲回车以后，经历的过程（简介）</strong> </p>
+<a id="more"></a>
+<ul>
+<li>封装请求报文</li>
+<li>dns查询（查询到ip地址）</li>
+<li>把客户端的请求报文发送给服务器</li>
+<li>服务器接收请求报文并解析</li>
+<li>根据请求做处理，并将处理结果封装成响应报文</li>
+<li>把响应报文发送给浏览器</li>
+<li>浏览器解析响应报文</li>
+<li>解析渲染 HTML 页面</li>
+<li>从上到下依次解析 HTML标签</li>
+<li><p>根据 html 标签生成 dom树、css规则树、生成渲染树、reflow（layout）、绘制</p>
+<h2 id="How-Browsers-work-浏览器是如何工作的"><a href="#How-Browsers-work-浏览器是如何工作的" class="headerlink" title="How Browsers work - 浏览器是如何工作的"></a>How Browsers work - 浏览器是如何工作的</h2><p><a href="http://taligarsiel.com/Projects/howbrowserswork1.htm#The_browsers_we_will_talk_about" target="_blank" rel="external">How Browsers work</a></p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/03/19/浏览器访问服务器全过程（浏览器渲染引擎工作原理）/" data-id="cj7r12ft0000iuww5veen8r18" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/浏览器工作原理/">浏览器工作原理</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/03/24/搭建github博客和hexo/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          搭建github博客和hexo
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/03/14/web存储/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">web存储</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
