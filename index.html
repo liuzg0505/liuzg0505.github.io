@@ -123,10 +123,60 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/20/模块化和requireJS/" data-id="cj7ripb37000id4w5swpuxihv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/20/模块化和requireJS/" data-id="cj7vx5d44000th8w5tzfbjh6q" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/requireJS/">requireJS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模块化/">模块化</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-npm安装包的命令区别" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/26/npm安装包的命令区别/" class="article-date">
+  <time datetime="2016-08-26T13:29:05.000Z" itemprop="datePublished">2016-08-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/node/">node</a>►<a class="article-category-link" href="/categories/node/npm/">npm</a>►<a class="article-category-link" href="/categories/node/npm/npm-本地安装包三种命令区别/">npm 本地安装包三种命令区别</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/26/npm安装包的命令区别/">npm安装包的命令区别</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#<code>npm install</code> 包三种方式的区别</p>
+<p>##<code>npm install</code><br>本地安装，安装到当前项目的 <code>node_modules/</code> 目录下面<br>包依赖 <strong><em>不会</em></strong> 加到 <code>package.json</code>  文件的 <code>dependencies</code> 中，<strong><em>也不会</em></strong> 加到 <code>devDependencies</code> 中。</p>
+<p>##<code>npm install --save</code><br>简写： <code>npm install -S</code><br>本地安装，安装到当前项目的 <code>node_modules/</code> 目录下面，<br>包依赖 <strong><em>会</em></strong> 加到 <code>package.json</code>  文件的 <code>dependencies</code> 中，但 <strong><em>不会</em></strong>  加到 <code>devDependencies</code> 中。</p>
+<p><strong><code>dependencies</code>是运行时依赖：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dependencies 下的模块，则是我们发布后还需要依赖的模块，譬如像jQuery库或者Angular框架类似的，我们在开发完后后肯定还要依赖它们，否则就运行不了。</div></pre></td></tr></table></figure>
+<p><strong><code>devDependencies</code>是开发时的依赖：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">devDependencies 下列出的模块，是我们开发时用的，比如 我们安装 js的压缩包gulp-uglify 时，我们采用的是 “npm install --save-dev gulp-uglify ”命令安装，因为我们在发布后用不到它，而只是在我们开发才用到它。</div></pre></td></tr></table></figure>
+<p>##<code>npm install --save-dev</code><br>简写：<code>npm install -D</code><br>包依赖 <strong><em>会</em></strong> 加到 <code>package.json</code>  文件的 <code>dependencies</code> 中，也 <strong><em>会</em></strong> 加到 <code>devDependencies</code> 中。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/08/26/npm安装包的命令区别/" data-id="cj7vx5d35000ch8w53n0r5xde" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li></ul>
 
     </footer>
   </div>
@@ -178,7 +228,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/17/git分支操作和远程仓库/" data-id="cj7ripb2j0006d4w5wgyeycnf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/17/git分支操作和远程仓库/" data-id="cj7vx5d2l0005h8w53k8ol9po" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
@@ -229,7 +279,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/16/AngularJS（二）/" data-id="cj7ripb1r0000d4w59siouzi5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/16/AngularJS（二）/" data-id="cj7vx5d3l000gh8w55awh1w9u" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AngularJS/">AngularJS</a></li></ul>
@@ -292,7 +342,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/15/AngularJS（一）/" data-id="cj7ripb2e0005d4w5ncscawsg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/15/AngularJS（一）/" data-id="cj7vx5cy70000h8w56ks6446d" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AngularJS/">AngularJS</a></li></ul>
@@ -346,7 +396,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/04/16/bash和git常用命令/" data-id="cj7ripb220002d4w5sflvayjx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/04/16/bash和git常用命令/" data-id="cj7vx5d2r0007h8w53dpb0bhd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
@@ -406,7 +456,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/24/搭建github博客和hexo/" data-id="cj7ripb34000gd4w5fhe5wsyw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/24/搭建github博客和hexo/" data-id="cj7vx5d3s000mh8w5nrmjeb7a" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
@@ -449,7 +499,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/19/浏览器访问服务器全过程（浏览器渲染引擎工作原理）/" data-id="cj7ripb3c000nd4w536uizczq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/19/浏览器访问服务器全过程（浏览器渲染引擎工作原理）/" data-id="cj7vx5d3w000oh8w5x1i7ukd7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/浏览器工作原理/">浏览器工作原理</a></li></ul>
@@ -504,7 +554,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/14/web存储/" data-id="cj7ripb2t000bd4w5jlfsqwyl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/14/web存储/" data-id="cj7vx5d33000bh8w5iuls4p40" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cookie/">cookie</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/http状态保持/">http状态保持</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/localStorage/">localStorage</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/session/">session</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sessionStorage/">sessionStorage</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web存储/">web存储</a></li></ul>
@@ -556,7 +606,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/10/原生JS之三大家族/" data-id="cj7ripb2z000cd4w5tr8f2b1w" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/10/原生JS之三大家族/" data-id="cj7vx5d3n000hh8w58vg6pjk4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/client系列/">client系列</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/offset系列/">offset系列</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scroll系列/">scroll系列</a></li></ul>
@@ -568,52 +618,11 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/02/26/hello-world/" class="article-date">
-  <time datetime="2016-02-26T13:14:21.000Z" itemprop="datePublished">2016-02-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/26/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/26/hello-world/" data-id="cj7ripb2m0007d4w5uwqjszmo" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
 
-  
-
+  <nav id="page-nav">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
+  </nav>
 </section>
         
           <aside id="sidebar">
@@ -622,7 +631,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AngularJS/">AngularJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web存储/">web存储</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/三大家族/">三大家族</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/模块化/">模块化</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/模块化/requireJS/">requireJS</a></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AngularJS/">AngularJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web存储/">web存储</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/三大家族/">三大家族</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/node/">node</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/node/npm/">npm</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/node/npm/npm-本地安装包三种命令区别/">npm 本地安装包三种命令区别</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/模块化/">模块化</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/模块化/requireJS/">requireJS</a></li></ul></li></ul>
     </div>
   </div>
 
@@ -632,7 +641,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AngularJS/">AngularJS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/client系列/">client系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cookie/">cookie</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http状态保持/">http状态保持</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/localStorage/">localStorage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/offset系列/">offset系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/requireJS/">requireJS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scroll系列/">scroll系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/session/">session</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sessionStorage/">sessionStorage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web存储/">web存储</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模块化/">模块化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浏览器工作原理/">浏览器工作原理</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AngularJS/">AngularJS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/client系列/">client系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cookie/">cookie</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http状态保持/">http状态保持</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/localStorage/">localStorage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/offset系列/">offset系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/requireJS/">requireJS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scroll系列/">scroll系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/session/">session</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sessionStorage/">sessionStorage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web存储/">web存储</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模块化/">模块化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浏览器工作原理/">浏览器工作原理</a></li></ul>
     </div>
   </div>
 
@@ -642,7 +651,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/AngularJS/" style="font-size: 15px;">AngularJS</a> <a href="/tags/client系列/" style="font-size: 10px;">client系列</a> <a href="/tags/cookie/" style="font-size: 10px;">cookie</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/http状态保持/" style="font-size: 10px;">http状态保持</a> <a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/localStorage/" style="font-size: 10px;">localStorage</a> <a href="/tags/offset系列/" style="font-size: 10px;">offset系列</a> <a href="/tags/requireJS/" style="font-size: 10px;">requireJS</a> <a href="/tags/scroll系列/" style="font-size: 10px;">scroll系列</a> <a href="/tags/session/" style="font-size: 10px;">session</a> <a href="/tags/sessionStorage/" style="font-size: 10px;">sessionStorage</a> <a href="/tags/web存储/" style="font-size: 10px;">web存储</a> <a href="/tags/模块化/" style="font-size: 10px;">模块化</a> <a href="/tags/浏览器工作原理/" style="font-size: 10px;">浏览器工作原理</a>
+      <a href="/tags/AngularJS/" style="font-size: 15px;">AngularJS</a> <a href="/tags/client系列/" style="font-size: 10px;">client系列</a> <a href="/tags/cookie/" style="font-size: 10px;">cookie</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/http状态保持/" style="font-size: 10px;">http状态保持</a> <a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/localStorage/" style="font-size: 10px;">localStorage</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/offset系列/" style="font-size: 10px;">offset系列</a> <a href="/tags/requireJS/" style="font-size: 10px;">requireJS</a> <a href="/tags/scroll系列/" style="font-size: 10px;">scroll系列</a> <a href="/tags/session/" style="font-size: 10px;">session</a> <a href="/tags/sessionStorage/" style="font-size: 10px;">sessionStorage</a> <a href="/tags/web存储/" style="font-size: 10px;">web存储</a> <a href="/tags/模块化/" style="font-size: 10px;">模块化</a> <a href="/tags/浏览器工作原理/" style="font-size: 10px;">浏览器工作原理</a>
     </div>
   </div>
 
@@ -651,7 +660,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a></li></ul>
     </div>
   </div>
 
@@ -668,6 +677,10 @@
           </li>
         
           <li>
+            <a href="/2016/08/26/npm安装包的命令区别/">npm安装包的命令区别</a>
+          </li>
+        
+          <li>
             <a href="/2016/05/17/git分支操作和远程仓库/">git分支操作和远程仓库</a>
           </li>
         
@@ -677,10 +690,6 @@
         
           <li>
             <a href="/2016/05/15/AngularJS（一）/">AngularJS（一）</a>
-          </li>
-        
-          <li>
-            <a href="/2016/04/16/bash和git常用命令/">bash和git常用命令</a>
           </li>
         
       </ul>
