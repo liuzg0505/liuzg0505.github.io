@@ -5,18 +5,18 @@
   
   <title>npm安装包的命令区别 | 小强</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="npm install 包三种方式的区别 #npm install 本地安装，安装到当前项目的 node_modules/ 目录下面包依赖 不会 加到 package.json  文件的 dependencies 中，也不会 加到 devDependencies 中。 #npm install –save  简写： npm install -S本地安装，安装到当前项目的 node_modules/">
+  <meta name="description" content="npm install 包三种方式的区别 npm install本地安装，安装到当前项目的 node_modules/ 目录下面包依赖 不会 加到 package.json  文件的 dependencies 中，也不会 加到 devDependencies 中。 npm install –save简写： npm install -S本地安装，安装到当前项目的 node_modules/ 目录下面">
 <meta name="keywords" content="npm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="npm安装包的命令区别">
 <meta property="og:url" content="http://yoursite.com/2016/08/26/npm安装包的命令区别/index.html">
 <meta property="og:site_name" content="小强">
-<meta property="og:description" content="npm install 包三种方式的区别 #npm install 本地安装，安装到当前项目的 node_modules/ 目录下面包依赖 不会 加到 package.json  文件的 dependencies 中，也不会 加到 devDependencies 中。 #npm install –save  简写： npm install -S本地安装，安装到当前项目的 node_modules/">
+<meta property="og:description" content="npm install 包三种方式的区别 npm install本地安装，安装到当前项目的 node_modules/ 目录下面包依赖 不会 加到 package.json  文件的 dependencies 中，也不会 加到 devDependencies 中。 npm install –save简写： npm install -S本地安装，安装到当前项目的 node_modules/ 目录下面">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-22T14:06:38.988Z">
+<meta property="og:updated_time" content="2017-09-22T14:42:37.737Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="npm安装包的命令区别">
-<meta name="twitter:description" content="npm install 包三种方式的区别 #npm install 本地安装，安装到当前项目的 node_modules/ 目录下面包依赖 不会 加到 package.json  文件的 dependencies 中，也不会 加到 devDependencies 中。 #npm install –save  简写： npm install -S本地安装，安装到当前项目的 node_modules/">
+<meta name="twitter:description" content="npm install 包三种方式的区别 npm install本地安装，安装到当前项目的 node_modules/ 目录下面包依赖 不会 加到 package.json  文件的 dependencies 中，也不会 加到 devDependencies 中。 npm install –save简写： npm install -S本地安装，安装到当前项目的 node_modules/ 目录下面">
   
     <link rel="alternate" href="/atom.xml" title="小强" type="application/atom+xml">
   
@@ -98,21 +98,18 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><code>npm install</code> 包三种方式的区别</p>
-<p>#npm install</p>
-<p>本地安装，安装到当前项目的 <code>node_modules/</code> 目录下面<br>包依赖 <strong><em>不会</em></strong> 加到 <code>package.json</code>  文件的 <code>dependencies</code> 中，<strong><em>也不会</em></strong> 加到 <code>devDependencies</code> 中。</p>
-<p>#npm install –save </p>
-<p>简写： <code>npm install -S</code><br>本地安装，安装到当前项目的 <code>node_modules/</code> 目录下面，<br>包依赖 <strong><em>会</em></strong> 加到 <code>package.json</code>  文件的 <code>dependencies</code> 中，但 <strong><em>不会</em></strong>  加到 <code>devDependencies</code> 中。</p>
+<h1 id="npm-install"><a href="#npm-install" class="headerlink" title="npm install"></a>npm install</h1><p>本地安装，安装到当前项目的 <code>node_modules/</code> 目录下面<br>包依赖 <strong><em>不会</em></strong> 加到 <code>package.json</code>  文件的 <code>dependencies</code> 中，<strong><em>也不会</em></strong> 加到 <code>devDependencies</code> 中。</p>
+<h1 id="npm-install-–save"><a href="#npm-install-–save" class="headerlink" title="npm install –save"></a>npm install –save</h1><p>简写： <code>npm install -S</code><br>本地安装，安装到当前项目的 <code>node_modules/</code> 目录下面，<br>包依赖 <strong><em>会</em></strong> 加到 <code>package.json</code>  文件的 <code>dependencies</code> 中，但 <strong><em>不会</em></strong>  加到 <code>devDependencies</code> 中。</p>
 <p><strong><code>dependencies</code>是运行时依赖：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dependencies 下的模块，则是我们发布后还需要依赖的模块，譬如像jQuery库或者Angular框架类似的，我们在开发完后后肯定还要依赖它们，否则就运行不了。</div></pre></td></tr></table></figure>
 <p><strong><code>devDependencies</code>是开发时的依赖：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">devDependencies 下列出的模块，是我们开发时用的，比如 我们安装 js的压缩包gulp-uglify 时，我们采用的是 “npm install --save-dev gulp-uglify ”命令安装，因为我们在发布后用不到它，而只是在我们开发才用到它。</div></pre></td></tr></table></figure>
-<p>#npm install –save-dev </p>
-<p>简写：<code>npm install -D</code><br>包依赖 <strong><em>会</em></strong> 加到 <code>package.json</code>  文件的 <code>dependencies</code> 中，也 <strong><em>会</em></strong> 加到 <code>devDependencies</code> 中。</p>
+<h1 id="npm-install-–save-dev"><a href="#npm-install-–save-dev" class="headerlink" title="npm install –save-dev"></a>npm install –save-dev</h1><p>简写：<code>npm install -D</code><br>包依赖 <strong><em>会</em></strong> 加到 <code>package.json</code>  文件的 <code>dependencies</code> 中，也 <strong><em>会</em></strong> 加到 <code>devDependencies</code> 中。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/26/npm安装包的命令区别/" data-id="cj7vymp4w000bq4w5x3tdppbl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/08/26/npm安装包的命令区别/" data-id="cj7vzx7wv000b9sw59a959945" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li></ul>
